@@ -9,5 +9,11 @@ public class BarTest {
     public void testBar() {
         Bar m = new Bar();
         assertEquals(5, m.sort().length);
+
+        try {
+          Thread.sleep(90000);
+        } catch (InterruptedException e) {
+          Thread.currentThread().interrupt();
+        }
     }
 }
