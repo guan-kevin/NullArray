@@ -19,7 +19,7 @@ public class FooTest {
 
     @Test
     public void testFoo2() {
-        Foo m = new Foo(2);
+        Foo m = new Foo2();
         assertTrue(m.returnTrue());
     }
 }
