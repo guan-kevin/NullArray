@@ -12,7 +12,10 @@ public class Baz {
             List<Integer> out = new ArrayList<>(Arrays.asList(numbers));
 
             Iterator<Integer> i = out.iterator();
-            if (Math.round(Math.random()) < 0.5) {
+            double rand = Math.random();
+            double number = Math.round(rand);
+            System.out.println("Number is " + number + " and rand is " + rand);
+            if (number < 0.5) {
                 i.next();
                 i.next();
                 System.out.println("NEXT");
