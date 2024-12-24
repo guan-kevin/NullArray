@@ -17,6 +17,7 @@ public class Baz {
                 i.next();
                 System.out.println("NEXT");
             } else {
+                System.out.println("NOT NEXT");
                 i.hasNext();
                 i.next();
             }
@@ -25,6 +26,7 @@ public class Baz {
 
     public void start() {
         for (int i = 0; i < 100; i++) {
+            System.out.println("Starting thread " + i);
             BazThread thread = new BazThread();
             thread.start();
         }
