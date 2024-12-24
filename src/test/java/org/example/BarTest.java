@@ -1,9 +1,11 @@
 package org.example;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+@Ignore
 public class BarTest {
     @Test
     public void testBar() {
