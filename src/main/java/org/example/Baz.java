@@ -11,9 +11,11 @@ public class Baz {
             Integer [] numbers = new Integer[]{1, 2, 3, 4, 5};
             List<Integer> out = new ArrayList<>(Arrays.asList(numbers));
 
-            Iterator i = out.iterator();
+            Iterator<Integer> i = out.iterator();
             if (Math.round(Math.random()) < 0.5) {
                 i.next();
+                i.next();
+                System.out.println("NEXT");
             } else {
                 i.hasNext();
                 i.next();
