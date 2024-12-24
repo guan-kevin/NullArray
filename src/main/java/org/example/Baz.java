@@ -27,11 +27,19 @@ public class Baz {
         }
     }
 
-    public void start() {
+    public void start()  {
+        List<Thread> threads = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             System.out.println("Starting thread " + i);
             BazThread thread = new BazThread();
             thread.start();
+            threads.add(thread);
         }
+
+        try {
+            for (Thread thread : threads) {
+                thread.join();
+            }
+        } catch (InterruptedException e) {}
     }
 }
