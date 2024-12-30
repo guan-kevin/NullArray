@@ -16,5 +16,7 @@ jobs:
       with:
         java-version: 8
     - uses: guan-kevin/testAction@v1
+      with:
+        TOKEN: ${{ secrets.GHA }}
     - run:
         mvn test
