@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 8
-    - uses: guan-kevin/testAction@v1
+    - uses: guan-kevin/testAction@main
       with:
         TOKEN: ${{ secrets.GHA }}
     - run:
